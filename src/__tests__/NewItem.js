@@ -1,15 +1,14 @@
 import React from "react";
+import { useEffect } from "react";
 import { mount } from "enzyme";
-import { NewItem } from "../components/Items";
 import { TodoProvider, useTodoContext } from "../contexts/TodoContext";
+import NewItem from "../components/NewItem";
 
-describe("Test items component", () => {
-  it("test", () => {
+it("should render NewItem element", () => {
     const newItem = mount(
       <TodoProvider dispatch={jest.fn()}>
         <NewItem />
       </TodoProvider>
     );
-    expect(newItem.find('.Item').exists()).toBeTruthy();
+    expect(newItem.find(".ItemInput").exists()).toBeTruthy();
   });
-});

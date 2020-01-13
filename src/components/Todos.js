@@ -1,5 +1,6 @@
 import React from "react";
-import { NewItem, ItemList } from "./Items";
+import ItemList from "./ItemList";
+import NewItem from "./NewItem";
 
 export default function Todo() {
   return (
