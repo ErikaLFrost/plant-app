@@ -12,6 +12,7 @@ export default function ItemList() {
       ))}
       {items.length > 0 && (
         <p
+          name="clear-all"
           style={{ fontSize: "15px", cursor: "pointer" }}
           onClick={() => dispatch(clearAll())}
         >
