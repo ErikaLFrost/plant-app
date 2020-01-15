@@ -8,6 +8,7 @@ export default function NewItem() {
   return (
     <div className="ItemInput">
       <input
+        name="new-item"
         type="text"
         placeholder="New Task"
         value={text}

@@ -13,7 +13,26 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress:open": "cypress open",
+    "cypress:e2e": "start-server-and-test start http://localhost:3000 cypress:open"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js",
+      "!src/registerServiceWorker.js",
+      "!src/setupTests.js",
+      "!src/serviceWorker.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 0
+      }
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,7 +50,9 @@
     ]
   },
   "devDependencies": {
+    "cypress": "^3.8.2",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.1"
+    "enzyme-adapter-react-16": "^1.15.1",
+    "start-server-and-test": "^1.10.6"
   }
 }

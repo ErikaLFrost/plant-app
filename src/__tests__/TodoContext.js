@@ -2,10 +2,7 @@ import React from "react";
 import * as TodoContext from "../contexts/TodoContext";
 
 describe("Test context with state, actions and reducer", () => {
-  const setState = jest.fn();
   const initialItems = [ "Träna", "Bada", "Klappa katt" ]
-  const useStateSpy = jest.spyOn(React, "useState");
-  useStateSpy.mockImplementation(init => [init, setState]);
 
   it("Should call action addTodo with item", () => {
     const item = "pet cat";
@@ -37,8 +34,8 @@ describe("Test context with state, actions and reducer", () => {
     expect(TodoContext.todoReducer(initialItems, action)).toHaveLength(2);
   });
 
-  xit("Should call reducer case CLEAR_ALL", () => {
-    const action = { "type": "CLEAR ALL" };
+  it("Should call reducer case CLEAR_ALL", () => {
+    const action = { "type": "CLEAR_ALL" };
     expect(TodoContext.todoReducer(initialItems, action)).toHaveLength(0);
   });
 
