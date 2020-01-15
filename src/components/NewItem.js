@@ -6,7 +6,9 @@ export default function NewItem() {
   const { dispatch } = useTodoContext();
 
   return (
-    <div className="ItemInput">
+    <form 
+    className="ItemInput"
+    onSubmit={() => dispatch(addTodo(text))}>
       <input
         name="new-item"
         type="text"
@@ -14,7 +16,7 @@ export default function NewItem() {
         value={text}
         onChange={e => setText(e.target.value)}
       ></input>
-      <button onClick={() => dispatch(addTodo(text))}>Add</button>
-    </div>
+      <button type="submit">Add</button>
+    </form>
   );
 }

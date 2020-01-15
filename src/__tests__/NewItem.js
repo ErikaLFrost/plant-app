@@ -26,7 +26,7 @@ describe("Test NewItem component", () => {
   it("should call setState onClick", () => {
     const todoReducerSpy = jest.spyOn(TodoContext, "addTodo") 
     wrapper.find("input").simulate("change", {target: {name: "new-item", value: "Tvätta"}});
-    wrapper.find("button").simulate("click");
+    wrapper.find("form").simulate("submit");
     expect(todoReducerSpy).toHaveBeenCalledWith("Tvätta");
   });
 });
