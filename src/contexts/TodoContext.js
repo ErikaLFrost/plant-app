@@ -41,7 +41,10 @@ export function todoReducer(state, action) {
         )
       };
     case CLEAR_ALL:
-      return [];
+      return {
+        ...state,
+        items:[]
+      };
     default:
       return state.items;
   }
