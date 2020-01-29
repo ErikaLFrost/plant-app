@@ -3,7 +3,7 @@ import { mount } from "enzyme";
 import ItemList from "../components/ItemList";
 import * as TodoContext from "../contexts/TodoContext";
 
-describe("Tests for ItemList component", () => {
+xdescribe("Tests for ItemList component", () => {
   let wrapper;
   beforeEach(() => {
     wrapper = mount(

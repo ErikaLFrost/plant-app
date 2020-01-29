@@ -1,7 +1,7 @@
 import React from "react";
 import * as TodoContext from "../contexts/TodoContext";
 
-describe("Test context with state, actions and reducer", () => {
+xdescribe("Test context with state, actions and reducer", () => {
   const initialItems = [ "Träna", "Bada", "Klappa katt" ]
 
   it("Should call action addTodo with item", () => {

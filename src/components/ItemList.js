@@ -3,7 +3,9 @@ import Item from "./Item";
 import { useTodoContext, clearAll } from "../contexts/TodoContext";
 
 export default function ItemList() {
-  const { items, dispatch } = useTodoContext();
+  const { state, dispatch } = useTodoContext();
+  const items = state.items;
+  console.log(items);
 
   return (
     <>

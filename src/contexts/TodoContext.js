@@ -3,10 +3,10 @@ import React, { createContext, useReducer, useContext } from "react";
 export const TodoContext = createContext();
 
 // Initial state
-const initialItems = [
-  "Extract todo state to todo context",
-  "Implement todo provider"
-];
+const initialState = {
+  dropDown: false,
+  items: ["hej", "hejdå"]
+};
 
 // Actions
 export const ADD_TODO = "ADD_TODO";
@@ -30,22 +30,27 @@ export function clearAll() {
 export function todoReducer(state, action) {
   switch (action.type) {
     case ADD_TODO:
-      return [...state, action.text];
+      return Object.assign({}, state, {
+        items: [...state.items, action.text]
+      });
     case REMOVE_TODO:
-      const copy = [...state];
-      copy.splice(action.index, 1);
-      return copy;
+      return {
+        ...state,
+        items: state.items.filter(
+          item => item !== state.items[action.index]
+        )
+      };
     case CLEAR_ALL:
       return [];
     default:
-      return state;
+      return state.items;
   }
 }
 
 function TodoProvider(props) {
-  const [items, dispatch] = useReducer(todoReducer, initialItems);
+  const [state, dispatch] = useReducer(todoReducer, initialState);
 
-  const todoData = { items, dispatch };
+  const todoData = { state, dispatch };
 
   return <TodoContext.Provider value={todoData} {...props} />;
 }

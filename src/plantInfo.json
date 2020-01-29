@@ -1,0 +1,154 @@
+{
+  "plants": [
+    {
+      "name": "Monstera",
+      "wateringInterval": 5,
+      "placing": "Skugga"
+    },
+    {
+      "name": "Guldpalm",
+      "wateringInterval": 5,
+      "placing": "Halvskugga"
+    },
+    {
+      "name": "Gullranka",
+      "wateringInterval": 5,
+      "placing": "Halvskugga"
+    },
+    {
+      "name": "Murgröna",
+      "wateringInterval": 5,
+      "placing": "Skugga eller halvskugga"
+    },
+    {
+      "name": "Amazonsköld",
+      "wateringInterval": 5,
+      "placing": "Ljust eller halvskugga"
+    },
+    {
+      "name": "Forellbegonia",
+      "wateringInterval": 5,
+      "placing": "Skugga eller halvskugga"
+    },
+    {
+      "name": "Trekantseuforbia",
+      "wateringInterval": 5,
+      "placing": "Ljust"
+    },
+    {
+      "name": "Rosenstänk",
+      "wateringInterval": 5,
+      "placing": "Ljust eller halvskugga"
+    },
+    {
+      "name": "Elefantöra",
+      "wateringInterval": 5,
+      "placing": "Ljust eller halvskugga"
+    },
+    {
+      "name": "Silverkalla",
+      "wateringInterval": 5,
+      "placing": "Skugga eller halvskugga"
+    },
+    {
+      "name": "Rexbegonia",
+      "wateringInterval": 5,
+      "placing": "Skugga eller halvskugga"
+    },
+    {
+      "name": "Palettblad",
+      "wateringInterval": 5,
+      "placing": "Ljust"
+    },
+    {
+      "name": "Svärmorstunga",
+      "wateringInterval": 11,
+      "placing": "Ljust eller halvskugga"
+    },
+    {
+      "name": "Paradisträd",
+      "wateringInterval": 11,
+      "placing": "Ljust"
+    },
+    {
+      "name": "Zamiakalla",
+      "wateringInterval": 11,
+      "placing": "Ljust eller halvskugga"
+    },
+    {
+      "name": "Saintpaulia",
+      "wateringInterval": 11,
+      "placing": "Ljust"
+    },
+    {
+      "name": "Aloe",
+      "wateringInterval": 11,
+      "placing": "Ljust"
+    },
+    {
+      "name": "Påfågelsblad",
+      "wateringInterval": 11,
+      "placing": "Halvskugga"
+    },
+    {
+      "name": "Hyacint",
+      "wateringInterval": 11,
+      "placing": "Ljust eller halvskugga"
+    },
+    {
+      "name": "Agave",
+      "wateringInterval": 11,
+      "placing": "Ljust"
+    },
+    {
+      "name": "Kaktuseuforbia",
+      "wateringInterval": 11,
+      "placing": "Ljust"
+    },
+    {
+      "name": "Euforbia",
+      "wateringInterval": 11,
+      "placing": "Ljust"
+    },
+    {
+      "name": "Yuccapalm",
+      "wateringInterval": 11,
+      "placing": "Ljust"
+    },
+    {
+      "name": "Hortensia",
+      "wateringInterval": 2,
+      "placing": "Ljust eller halvskugga"
+    },
+    {
+      "name": "Fikus",
+      "wateringInterval": 2,
+      "placing": "Ljust"
+    },
+    {
+      "name": "Kalla",
+      "wateringInterval": 2,
+      "placing": "Ljust eller halvskugga"
+    },
+    {
+      "name": "Hibiskus",
+      "wateringInterval": 2,
+      "placing": "Ljust"
+    },
+    {
+      "name": "Bonsai",
+      "wateringInterval": 2,
+      "placing": "Ljust eller halvskugga"
+    },
+    {
+      "name": "Bräken",
+      "wateringInterval": 2,
+      "placing": "Ljust eller halvskugga"
+    },
+    {
+      "name": "Brudorkidé",
+      "wateringInterval": 2,
+      "placing": "Ljust"
+    }
+  ]
+}

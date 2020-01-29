@@ -3,7 +3,7 @@ import { mount } from "enzyme";
 import { TodoProvider} from "../contexts/TodoContext";
 import Todos from "../components/Todos";
 
-it('Should render component', () => {
+xit('Should render component', () => {
     const wrapper = mount(
         <TodoProvider dispatch={jest.fn()}>
           <Todos />
