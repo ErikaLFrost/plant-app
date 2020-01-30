@@ -1,26 +1,36 @@
 import React, { useState } from "react";
 import { useTodoContext, addTodo } from "../contexts/TodoContext";
-import plantInfo from "../plantInfo.json";
+import Autocomplete from "./Autocomplete";
 
 export default function NewItem() {
-  const [text, setText] = useState("");
+  const [plantName, setplantName] = useState("");
+  const [plantInfo, setPlant] = useState("Select an Item");
   const { dispatch } = useTodoContext();
+  
+  const onItemSelected = selectedItem => {
+    setPlant(selectedItem.name);
+  };
 
   return (
-    <div className="ItemInput">
+    <form
+      className="ItemInput"
+      onSubmit={e => {
+        e.preventDefault();
+        dispatch(addTodo(plantName, plantInfo));
+      }}
+    >
+    <div>{plantInfo}</div>
       <input
         name="new-item"
         type="text"
         placeholder="New Task"
-        value={text}
-        onChange={e => setText(e.target.value)}
+        value={plantName}
+        onChange={e => setplantName(e.target.value)}
       ></input>
-      <ul>
-        {plantInfo.plants.map((plants, i) => {
-          return <li key={i}>{plants.name}</li>;
-        })}
-      </ul>
-      <button onClick={() => dispatch(addTodo(text))}>Add</button>
-    </div>
+      <Autocomplete
+        onItemSelected={onItemSelected}
+      ></Autocomplete>
+      <button>Add</button>
+    </form>
   );
 }

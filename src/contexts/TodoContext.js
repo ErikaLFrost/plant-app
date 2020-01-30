@@ -5,7 +5,12 @@ export const TodoContext = createContext();
 // Initial state
 const initialState = {
   dropDown: false,
-  items: ["hej", "hejdå"]
+  items: [
+    {
+      name: "Gunnar",
+      plantType: "Monstera"
+    }
+  ]
 };
 
 // Actions
@@ -14,8 +19,8 @@ export const REMOVE_TODO = "REMOVE_TODO";
 export const CLEAR_ALL = "CLEAR_ALL";
 
 // Action creators
-export function addTodo(text) {
-  return { type: ADD_TODO, text };
+export function addTodo(plantName, plantType) {
+  return { type: ADD_TODO, item: {name: plantName, plantType: plantType,}};
 }
 
 export function removeTodo(index) {
@@ -30,20 +35,21 @@ export function clearAll() {
 export function todoReducer(state, action) {
   switch (action.type) {
     case ADD_TODO:
-      return Object.assign({}, state, {
-        items: [...state.items, action.text]
-      });
+      return {...state,
+        items: [
+          ...state.items,
+            action.item
+        ]
+      };
     case REMOVE_TODO:
       return {
         ...state,
-        items: state.items.filter(
-          item => item !== state.items[action.index]
-        )
+        items: state.items.filter(item => item !== state.items[action.index])
       };
     case CLEAR_ALL:
       return {
         ...state,
-        items:[]
+        items: []
       };
     default:
       return state.items;

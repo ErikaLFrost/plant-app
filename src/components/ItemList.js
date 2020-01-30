@@ -10,7 +10,7 @@ export default function ItemList() {
   return (
     <>
       {items.map((item, i) => (
-        <Item text={item} index={i} key={i} dispatch={dispatch} />
+        <Item text={item.name} index={i} key={i} dispatch={dispatch} />
       ))}
       {items.length > 0 && (
         <p
