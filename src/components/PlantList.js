@@ -1,5 +1,5 @@
 import React from "react";
-import Item from "./Item";
+import Plant from "./Plant";
 import { useTodoContext, clearAll } from "../contexts/TodoContext";
 
 export default function ItemList() {
@@ -10,7 +10,7 @@ export default function ItemList() {
   return (
     <>
       {items.map((item, i) => (
-        <Item text={item.name} index={i} key={i} dispatch={dispatch} />
+        <Plant text={item.name} index={i} key={i} dispatch={dispatch} />
       ))}
       {items.length > 0 && (
         <p
@@ -18,7 +18,7 @@ export default function ItemList() {
           style={{ fontSize: "15px", cursor: "pointer" }}
           onClick={() => dispatch(clearAll())}
         >
-          Clear All
+          Ta bort alla
         </p>
       )}
     </>

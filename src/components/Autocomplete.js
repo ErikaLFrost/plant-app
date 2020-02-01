@@ -38,10 +38,9 @@ export default function Autocomplete({selectedItem, onItemSelected}) {
             style={{ marginTop: "1rem", display: "block" }}
             {...getLabelProps()}
           >
-            Välj typ av växt
+            Välj växttyp
           </label>{" "}
-          <br />
-          <input {...getInputProps({ placeholder: "Search plants" })} />
+          <input {...getInputProps({ placeholder: "Sök växttyp" })} />
           {isOpen ? (
             <div className="downshift-dropdown">
               {items

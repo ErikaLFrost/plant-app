@@ -5,7 +5,7 @@ export default function Item({ text, index, dispatch }) {
   return (
     <div className="Item">
       {index + 1} {text}
-      <span onClick={() => dispatch(removeTodo(index))}>Done</span>
+      <span onClick={() => dispatch(removeTodo(index))}>Ta bort</span>
     </div>
   );
 }

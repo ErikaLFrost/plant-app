@@ -6,7 +6,7 @@ export default function NewItem() {
   const [plantName, setplantName] = useState("");
   const [plantInfo, setPlant] = useState("Select an Item");
   const { dispatch } = useTodoContext();
-  
+
   const onItemSelected = selectedItem => {
     setPlant(selectedItem.name);
   };
@@ -19,18 +19,18 @@ export default function NewItem() {
         dispatch(addTodo(plantName, plantInfo));
       }}
     >
-    <div>{plantInfo}</div>
+      <label style={{ marginTop: "1rem", display: "block" }}>
+        Vad heter din växt?
+      </label>{" "}
       <input
         name="new-item"
         type="text"
-        placeholder="New Task"
+        placeholder="Växtnamn"
         value={plantName}
         onChange={e => setplantName(e.target.value)}
       ></input>
-      <Autocomplete
-        onItemSelected={onItemSelected}
-      ></Autocomplete>
-      <button>Add</button>
+      <Autocomplete onItemSelected={onItemSelected}></Autocomplete>
+      <button>Lägg till</button>
     </form>
   );
 }
