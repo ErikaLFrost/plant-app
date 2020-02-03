@@ -4,6 +4,10 @@ export const TodoContext = createContext();
 
 const getInitialState = () => {
   try {
+    const state = localStorage.getItem('my-state');
+    if(state === null) {
+      return {items: []};
+    }
     return JSON.parse(localStorage.getItem("my-state"));
   } catch (err) {
     return {
@@ -11,11 +15,6 @@ const getInitialState = () => {
     };
   }
 };
-
-// Initial state
-const initialState = {
-  items:[]
-}
 
 console.log(getInitialState());
 
@@ -71,7 +70,7 @@ const withLocalStorageCache = todoReducer => {
 };
 
 function TodoProvider(props) {
-  const [state, dispatch] = useReducer(withLocalStorageCache(todoReducer), initialState);
+  const [state, dispatch] = useReducer(withLocalStorageCache(todoReducer), getInitialState());
 
   const todoData = { state, dispatch };
 

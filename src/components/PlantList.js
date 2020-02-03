@@ -4,28 +4,23 @@ import { useTodoContext, clearAll } from "../contexts/TodoContext";
 
 export default function ItemList() {
   const { state, dispatch } = useTodoContext();
-
+  const items = state.items;
   console.log(state);
 
-  if (state === null) {
-    console.log('state === null');
-    return [];
-  } else {
-    return (
-      <>
-        {state.items.map((item, i) => (
-          <Plant text={item.name} index={i} key={i} dispatch={dispatch} />
-        ))}
-        {state.items.length > 0 && (
-          <p
-            name="clear-all"
-            style={{ fontSize: "15px", cursor: "pointer", color: "#fc4040" }}
-            onClick={() => dispatch(clearAll())}
-          >
-            Ta bort alla
-          </p>
-        )}
-      </>
-    );
-  }
+  return (
+    <>
+      {items.map((item, i) => (
+        <Plant text={item.name} index={i} key={i} dispatch={dispatch} />
+      ))}
+      {items.length > 0 && (
+        <p
+          name="clear-all"
+          style={{ fontSize: "15px", cursor: "pointer", color: "#fc4040" }}
+          onClick={() => dispatch(clearAll())}
+        >
+          Ta bort alla
+        </p>
+      )}
+    </>
+  );
 }
