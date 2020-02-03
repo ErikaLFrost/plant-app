@@ -2,16 +2,22 @@ import React, { createContext, useReducer, useContext } from "react";
 
 export const TodoContext = createContext();
 
+const getInitialState = () => {
+  try {
+    return JSON.parse(localStorage.getItem("my-state"));
+  } catch (err) {
+    return {
+      items:[]
+    };
+  }
+};
+
 // Initial state
 const initialState = {
-  dropDown: false,
-  items: [
-    {
-      name: "Gunnar",
-      plantType: "Monstera"
-    }
-  ]
-};
+  items:[]
+}
+
+console.log(getInitialState());
 
 // Actions
 export const ADD_TODO = "ADD_TODO";
@@ -56,8 +62,16 @@ export function todoReducer(state, action) {
   }
 }
 
+const withLocalStorageCache = todoReducer => {
+  return (state, action) => {
+    const newState = todoReducer(state, action);
+    localStorage.setItem("my-state", JSON.stringify(newState));
+    return newState;
+  };
+};
+
 function TodoProvider(props) {
-  const [state, dispatch] = useReducer(todoReducer, initialState);
+  const [state, dispatch] = useReducer(withLocalStorageCache(todoReducer), initialState);
 
   const todoData = { state, dispatch };
 

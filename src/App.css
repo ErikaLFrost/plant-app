@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400i,700|Libre+Baskerville:400,700&display=swap");
+
 .App {
   text-align: center;
+  font-family: "Anonymous Pro", monospace;
 }
 
 .App-logo {
@@ -7,14 +10,19 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #f6fbf5;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #74c178;
+}
+
+h2 {
+  color: #efdeaa;
+  font-family: "Libre Baskerville", serif;
 }
 
 .App-link {
@@ -32,13 +40,20 @@
   font-size: calc(10px + 2vmin);
   padding-left: 5px;
   border: none;
+  background-color: #74a590c7;
+}
+
+::placeholder {
+  color: #f6fbf5;
 }
 
 .ItemInput button {
   font-size: calc(10px + 2vmin);
-  background-color: #09d3ac;
+  background-color: #74c178b5;
+  color: #f6fbf5;
   padding: 5px 10px;
   margin-left: 10px;
+  margin-top: 10px;
   border: none;
 }
 
@@ -47,4 +62,8 @@
   padding-left: 5px;
   font-size: 15px;
   cursor: pointer;
+}
+
+label {
+  margin-bottom: 5px;
 }
