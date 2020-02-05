@@ -6,11 +6,12 @@ export default function NewItem() {
   const [plantName, setplantName] = useState("");
   const [wateringInterval, setWateringInterval] = useState(0);
   const [plantInfo, setPlant] = useState("Select an Item");
+  const [plantPlacing, setPlantPlacing] = useState("");
   const { dispatch } = useTodoContext();
 
   const onItemSelected = selectedItem => {
-    console.log(selectedItem.name, selectedItem.wateringInterval);
     setWateringInterval(selectedItem.wateringInterval);
+    setPlantPlacing(selectedItem.placing)
     setPlant(selectedItem.name);
   };
 
@@ -19,7 +20,7 @@ export default function NewItem() {
       className="ItemInput"
       onSubmit={e => {
         e.preventDefault();
-        dispatch(addTodo(plantName, plantInfo, wateringInterval));
+        dispatch(addTodo(plantName, plantInfo, wateringInterval, plantPlacing));
       }}
     >
       <label style={{ marginTop: "1rem", display: "block" }}>

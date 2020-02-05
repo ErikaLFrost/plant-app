@@ -31,9 +31,34 @@ h2 {
 
 .Item {
   font-size: calc(10px + 2vmin);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-top: 7px;
+  background-color: #efdeaa6e
+}
+
+ItemInfo{
   display: flex;
   flex-direction: row;
-  padding: 5px;
+}
+
+.watered{
+  background-color: #f3efd5;
+  border: none;
+  cursor: pointer;
+}
+
+.watered img{
+  background-color: #f3efd5;
+  height: 25px;
+  width: 25px;
+}
+
+.placing{
+  font-size: calc(2px + 2vmin);
+  margin: 4px;
 }
 
 .ItemInput input {
@@ -58,10 +83,14 @@ h2 {
 }
 
 .Item span {
-  color: #fc4040;
+  color: #c5a953;
   padding-left: 5px;
   font-size: 15px;
   cursor: pointer;
+}
+
+.Timer{
+  color: #efdeaa;
 }
 
 label {
