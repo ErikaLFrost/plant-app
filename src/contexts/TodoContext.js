@@ -4,14 +4,14 @@ export const TodoContext = createContext();
 
 const getInitialState = () => {
   try {
-    const state = localStorage.getItem('my-state');
-    if(state === null) {
-      return {items: []};
+    const state = localStorage.getItem("my-state");
+    if (state === null) {
+      return { items: [] };
     }
     return JSON.parse(localStorage.getItem("my-state"));
   } catch (err) {
     return {
-      items:[]
+      items: []
     };
   }
 };
@@ -22,10 +22,20 @@ console.log(getInitialState());
 export const ADD_TODO = "ADD_TODO";
 export const REMOVE_TODO = "REMOVE_TODO";
 export const CLEAR_ALL = "CLEAR_ALL";
+export const UPDATE_TIMER = "UPDATE_TIMER";
 
 // Action creators
-export function addTodo(plantName, plantType) {
-  return { type: ADD_TODO, item: {name: plantName, plantType: plantType,}};
+export function addTodo(plantName, plantType, wateringInterval) {
+  console.log(plantType);
+  return {
+    type: ADD_TODO,
+    item: {
+      name: plantName,
+      plantType: plantType,
+      wateringInterval: wateringInterval,
+      daysUntilWatering: wateringInterval
+    }
+  };
 }
 
 export function removeTodo(index) {
@@ -36,16 +46,15 @@ export function clearAll() {
   return { type: CLEAR_ALL };
 }
 
+export function updateTimer(index) {
+  return { type: UPDATE_TIMER, index };
+}
+
 // Reducer
 export function todoReducer(state, action) {
   switch (action.type) {
     case ADD_TODO:
-      return {...state,
-        items: [
-          ...state.items,
-            action.item
-        ]
-      };
+      return { ...state, items: [...state.items, action.item] };
     case REMOVE_TODO:
       return {
         ...state,
@@ -55,6 +64,21 @@ export function todoReducer(state, action) {
       return {
         ...state,
         items: []
+      };
+    case UPDATE_TIMER:
+      return {
+        ...state,
+        items: [
+          ...state.items.map((item, i) => {
+            if (i === action.index) {
+              return {
+                ...item,
+                daysUntilWatering: item.daysUntilWatering > 0 ? item.daysUntilWatering - 1 : item.wateringInterval
+              };
+            }
+            return item;
+          })
+        ]
       };
     default:
       return state.items;
@@ -70,7 +94,10 @@ const withLocalStorageCache = todoReducer => {
 };
 
 function TodoProvider(props) {
-  const [state, dispatch] = useReducer(withLocalStorageCache(todoReducer), getInitialState());
+  const [state, dispatch] = useReducer(
+    withLocalStorageCache(todoReducer),
+    getInitialState()
+  );
 
   const todoData = { state, dispatch };
 
