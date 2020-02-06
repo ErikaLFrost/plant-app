@@ -3,32 +3,32 @@
     {
       "name": "Monstera",
       "wateringInterval": 5,
-      "placing": "Skugga"
+      "placing": "Skuggigt"
     },
     {
       "name": "Guldpalm",
       "wateringInterval": 5,
-      "placing": "Halvskugga"
+      "placing": "Halvskuggigt"
     },
     {
       "name": "Gullranka",
       "wateringInterval": 5,
-      "placing": "Halvskugga"
+      "placing": "Halvskuggigt"
     },
     {
       "name": "Murgröna",
       "wateringInterval": 5,
-      "placing": "Skugga eller halvskugga"
+      "placing": "Skuggigt eller halvskuggigt"
     },
     {
       "name": "Amazonsköld",
       "wateringInterval": 5,
-      "placing": "Ljust eller halvskugga"
+      "placing": "Ljust eller halvskuggigt"
     },
     {
       "name": "Forellbegonia",
       "wateringInterval": 5,
-      "placing": "Skugga eller halvskugga"
+      "placing": "Skuggigt eller halvskuggigt"
     },
     {
       "name": "Trekantseuforbia",
@@ -38,22 +38,22 @@
     {
       "name": "Rosenstänk",
       "wateringInterval": 5,
-      "placing": "Ljust eller halvskugga"
+      "placing": "Ljust eller halvskuggigt"
     },
     {
       "name": "Elefantöra",
       "wateringInterval": 5,
-      "placing": "Ljust eller halvskugga"
+      "placing": "Ljust eller halvskuggigt"
     },
     {
       "name": "Silverkalla",
       "wateringInterval": 5,
-      "placing": "Skugga eller halvskugga"
+      "placing": "Skuggigt eller halvskuggigt"
     },
     {
       "name": "Rexbegonia",
       "wateringInterval": 5,
-      "placing": "Skugga eller halvskugga"
+      "placing": "Skuggigt eller halvskuggigt"
     },
     {
       "name": "Palettblad",
@@ -63,7 +63,7 @@
     {
       "name": "Svärmorstunga",
       "wateringInterval": 11,
-      "placing": "Ljust eller halvskugga"
+      "placing": "Ljust eller halvskuggigt"
     },
     {
       "name": "Paradisträd",
@@ -73,7 +73,7 @@
     {
       "name": "Zamiakalla",
       "wateringInterval": 11,
-      "placing": "Ljust eller halvskugga"
+      "placing": "Ljust eller halvskuggigt"
     },
     {
       "name": "Saintpaulia",
@@ -88,12 +88,12 @@
     {
       "name": "Påfågelsblad",
       "wateringInterval": 11,
-      "placing": "Halvskugga"
+      "placing": "Halvskuggigt"
     },
     {
       "name": "Hyacint",
       "wateringInterval": 11,
-      "placing": "Ljust eller halvskugga"
+      "placing": "Ljust eller halvskuggigt"
     },
     {
       "name": "Agave",
@@ -118,7 +118,7 @@
     {
       "name": "Hortensia",
       "wateringInterval": 2,
-      "placing": "Ljust eller halvskugga"
+      "placing": "Ljust eller halvskuggigt"
     },
     {
       "name": "Fikus",
@@ -128,7 +128,7 @@
     {
       "name": "Kalla",
       "wateringInterval": 2,
-      "placing": "Ljust eller halvskugga"
+      "placing": "Ljust eller halvskuggigt"
     },
     {
       "name": "Hibiskus",
@@ -138,12 +138,12 @@
     {
       "name": "Bonsai",
       "wateringInterval": 2,
-      "placing": "Ljust eller halvskugga"
+      "placing": "Ljust eller halvskuggigt"
     },
     {
       "name": "Bräken",
       "wateringInterval": 2,
-      "placing": "Ljust eller halvskugga"
+      "placing": "Ljust eller halvskuggigt"
     },
     {
       "name": "Brudorkidé",
