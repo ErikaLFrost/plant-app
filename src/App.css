@@ -10,7 +10,7 @@
 }
 
 .App-header {
-  background-color: #f6fbf5;
+  background-color: #fffefc;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -34,9 +34,9 @@ h2 {
   width: 300px;
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  margin-top: 7px;
-  background-color: #efdeaa6e
+  padding: 5px;
+  margin: 7px 0 7px;
+  background-color: #fde8e1
 }
 
 ItemInfo{
@@ -45,13 +45,13 @@ ItemInfo{
 }
 
 .watered{
-  background-color: #f3efd5;
+  background-color: #fde8e1;
   border: none;
   cursor: pointer;
 }
 
 .watered img{
-  background-color: #f3efd5;
+  background-color: #fde8e1;
   height: 25px;
   width: 25px;
 }
@@ -63,9 +63,11 @@ ItemInfo{
 
 .ItemInput input {
   font-size: calc(10px + 2vmin);
+  font-family: "Anonymous Pro", monospace;
   padding-left: 5px;
   border: none;
   background-color: #74a590c7;
+  color: white;
 }
 
 ::placeholder {
@@ -77,8 +79,7 @@ ItemInfo{
   background-color: #74c178b5;
   color: #f6fbf5;
   padding: 5px 10px;
-  margin-left: 10px;
-  margin-top: 10px;
+  margin: 10px;
   border: none;
 }
 

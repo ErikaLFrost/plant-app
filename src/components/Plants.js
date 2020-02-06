@@ -5,7 +5,7 @@ import NewPlant from "./NewPlant";
 export default function Todo() {
   return (
     <header className="App-header">
-      <h2>Välkommen till växt-hjälpen!</h2>
+      <h2>Välkommen till Växt-hjälpen!</h2>
       <NewPlant />
       <PlantList />
     </header>

@@ -25,7 +25,7 @@ export default function ItemList() {
       {items.length > 0 && (
         <p
           name="clear-all"
-          style={{ fontSize: "15px", cursor: "pointer", color: "#fc4040" }}
+          style={{ fontSize: "15px", cursor: "pointer", color: "#f78585" }}
           onClick={() => dispatch(clearAll())}
         >
           Ta bort alla

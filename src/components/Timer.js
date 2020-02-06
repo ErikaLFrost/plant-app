@@ -11,7 +11,7 @@ export default function Timer({ index }) {
   useEffect(() => {
     const interval = setInterval(() => {
       dispatch(updateTimer(index));
-    }, 1000);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
