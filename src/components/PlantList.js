@@ -1,8 +1,8 @@
 import React from "react";
 import Plant from "./Plant";
-import { useTodoContext, clearAll } from "../contexts/TodoContext";
+import { useTodoContext, clearAll } from "../contexts/PlantContext";
 
-export default function ItemList() {
+export default function PlantList() {
   const { state, dispatch } = useTodoContext();
   const items = state.items;
   console.log(state);

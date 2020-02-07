@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useTodoContext, addTodo } from "../contexts/TodoContext";
+import { useTodoContext, addTodo } from "../contexts/PlantContext";
 import Autocomplete from "./Autocomplete";
 
 export default function NewItem() {

@@ -79,7 +79,9 @@ export function todoReducer(state, action) {
             if (i === action.index) {
               return {
                 ...item,
-                daysUntilWatering: item.daysUntilWatering > 0 ? item.daysUntilWatering - 1 : 0
+                daysUntilWatering: item.daysUntilWatering > 0 
+                ? item.daysUntilWatering - 1 
+                : 0
               };
             }
             return item;

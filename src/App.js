@@ -1,6 +1,6 @@
 import React from "react";
 import Plants from "./components/Plants";
-import { TodoProvider } from "./contexts/TodoContext";
+import { TodoProvider } from "./contexts/PlantContext";
 import "./App.css";
 
 function App() {
