@@ -1,11 +1,11 @@
 import React from "react";
-import { removeTodo } from "../contexts/PlantContext";
+import { removePlant } from "../contexts/PlantContext";
 import Timer from './Timer'
 
 export default function Item({ text, index, wateringInterval, placing, plantType, dispatch }) {
   return (
     <div className="Item" key={index}>
-    <span style={{color: "#f78585", width: "10px", alignSelf: "flex-end"}} onClick={() => dispatch(removeTodo(index))}>X</span>
+    <span style={{color: "#f78585", width: "10px", alignSelf: "flex-end"}} onClick={() => dispatch(removePlant(index))}>X</span>
     <div className="ItemInfo">
       {index + 1} {text}
       <Timer wateringInterval={wateringInterval} index={index} />

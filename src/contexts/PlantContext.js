@@ -1,6 +1,6 @@
 import React, { createContext, useReducer, useContext } from "react";
 
-export const TodoContext = createContext();
+export const PlantContext = createContext();
 
 const getInitialState = () => {
   try {
@@ -19,17 +19,17 @@ const getInitialState = () => {
 console.log(getInitialState());
 
 // Actions
-export const ADD_TODO = "ADD_TODO";
-export const REMOVE_TODO = "REMOVE_TODO";
+export const ADD_PLANT = "ADD_PLANT";
+export const REMOVE_PLANT = "REMOVE_PLANT";
 export const CLEAR_ALL = "CLEAR_ALL";
 export const UPDATE_TIMER = "UPDATE_TIMER";
 export const RESET_TIMER = "RESET_TIMER";
 
 // Action creators
-export function addTodo(plantName, plantType, wateringInterval, plantPlacing) {
+export function addPlant(plantName, plantType, wateringInterval, plantPlacing) {
   console.log(plantType);
   return {
-    type: ADD_TODO,
+    type: ADD_PLANT,
     item: {
       name: plantName,
       plantType: plantType,
@@ -40,8 +40,8 @@ export function addTodo(plantName, plantType, wateringInterval, plantPlacing) {
   };
 }
 
-export function removeTodo(index) {
-  return { type: REMOVE_TODO, index };
+export function removePlant(index) {
+  return { type: REMOVE_PLANT, index };
 }
 
 export function clearAll() {
@@ -57,11 +57,11 @@ export function resetTimer(index) {
 }
 
 // Reducer
-export function todoReducer(state, action) {
+export function plantReducer(state, action) {
   switch (action.type) {
-    case ADD_TODO:
+    case ADD_PLANT:
       return { ...state, items: [...state.items, action.item] };
-    case REMOVE_TODO:
+    case REMOVE_PLANT:
       return {
         ...state,
         items: state.items.filter(item => item !== state.items[action.index])
@@ -108,27 +108,27 @@ export function todoReducer(state, action) {
   }
 }
 
-const withLocalStorageCache = todoReducer => {
+const withLocalStorageCache = plantReducer => {
   return (state, action) => {
-    const newState = todoReducer(state, action);
+    const newState = plantReducer(state, action);
     localStorage.setItem("my-state", JSON.stringify(newState));
     return newState;
   };
 };
 
-function TodoProvider(props) {
+function PlantProvider(props) {
   const [state, dispatch] = useReducer(
-    withLocalStorageCache(todoReducer),
+    withLocalStorageCache(plantReducer),
     getInitialState()
   );
 
-  const todoData = { state, dispatch };
+  const plantData = { state, dispatch };
 
-  return <TodoContext.Provider value={todoData} {...props} />;
+  return <PlantContext.Provider value={plantData} {...props} />;
 }
 
-function useTodoContext() {
-  return useContext(TodoContext);
+function usePlantContext() {
+  return useContext(PlantContext);
 }
 
-export { TodoProvider, useTodoContext };
+export { PlantProvider, usePlantContext };

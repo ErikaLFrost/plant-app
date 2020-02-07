@@ -1,14 +1,14 @@
 import React from "react";
 import Plants from "./components/Plants";
-import { TodoProvider } from "./contexts/PlantContext";
+import { PlantProvider } from "./contexts/PlantContext";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <TodoProvider>
+      <PlantProvider>
         <Plants />
-      </TodoProvider>
+      </PlantProvider>
     </div>
   );
 }

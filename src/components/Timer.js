@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
-import { useTodoContext } from "../contexts/PlantContext";
-import { updateTimer, resetTimer } from "../contexts/PlantContext";
+import { usePlantContext, updateTimer, resetTimer } from "../contexts/PlantContext";
 import waterImg from "../images/water.png"
 
 export default function Timer({ index }) {
-  const { dispatch, state } = useTodoContext();
+  const { dispatch, state } = usePlantContext();
   const daysUntilWatering = state.items[index].daysUntilWatering;
 
   useEffect(() => {

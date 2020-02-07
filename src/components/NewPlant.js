@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useTodoContext, addTodo } from "../contexts/PlantContext";
+import { usePlantContext, addPlant } from "../contexts/PlantContext";
 import Autocomplete from "./Autocomplete";
 
 export default function NewItem() {
@@ -7,7 +7,7 @@ export default function NewItem() {
   const [wateringInterval, setWateringInterval] = useState(0);
   const [plantInfo, setPlant] = useState("Select an Item");
   const [plantPlacing, setPlantPlacing] = useState("");
-  const { dispatch } = useTodoContext();
+  const { dispatch } = usePlantContext();
 
   const onItemSelected = selectedItem => {
     setWateringInterval(selectedItem.wateringInterval);
@@ -20,7 +20,7 @@ export default function NewItem() {
       className="ItemInput"
       onSubmit={e => {
         e.preventDefault();
-        dispatch(addTodo(plantName, plantInfo, wateringInterval, plantPlacing));
+        dispatch(addPlant(plantName, plantInfo, wateringInterval, plantPlacing));
       }}
     >
       <label style={{ marginTop: "1rem", display: "block" }}>
