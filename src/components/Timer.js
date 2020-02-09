@@ -6,12 +6,12 @@ export default function Timer({ index }) {
   const { dispatch, state } = usePlantContext();
   const daysUntilWatering = state.items[index].daysUntilWatering;
 
-  useEffect((dispatch, index) => {
+  useEffect(() => {
     const interval = setInterval(() => {
       dispatch(updateTimer(index));
-    }, 86400000);
+    }, 2000);
     return () => clearInterval(interval);
-  }, []);
+  });
 
   if (daysUntilWatering > 0) {
     return (

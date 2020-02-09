@@ -118,4 +118,7 @@ label {
   .Item {
     max-width: 70vw;
   }
+  .placing {
+    font-size: calc(6px + 2vmin);
+}
 }
