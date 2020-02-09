@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   font-size: calc(10px + 2vmin);
   color: #74c178;
 }
@@ -27,8 +27,9 @@ h2 {
 }
 
 .intro {
-  font-size: 18px;
-  width: 600px;
+  font-size: calc(4px + 2vmin);
+  width: 65vw;
+  line-height: calc(10px + 2vmin);
 }
 
 .App-link {
@@ -91,6 +92,7 @@ ItemInfo {
   padding: 5px 10px;
   margin: 10px;
   border: none;
+  cursor: pointer;
 }
 
 .Item span {
@@ -120,5 +122,5 @@ label {
   }
   .placing {
     font-size: calc(6px + 2vmin);
-}
+  }
 }
