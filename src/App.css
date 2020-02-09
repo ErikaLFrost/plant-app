@@ -35,7 +35,7 @@ h2 {
   color: #09d3ac;
 }
 
-form{
+form {
   margin-top: 6px;
 }
 
@@ -106,4 +106,16 @@ ItemInfo {
 
 label {
   margin-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+  h2 {
+    width: 85vw;
+  }
+  .intro {
+    width: 80vw;
+  }
+  .Item {
+    max-width: 70vw;
+  }
 }
