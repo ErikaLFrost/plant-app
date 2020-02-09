@@ -10,7 +10,7 @@ export default function PlantList() {
   return (
     <>
       {items.map((item, i) => (
-        <>
+        <React.Fragment key={i}>
           <Plant
             text={item.name}
             wateringInterval={item.wateringInterval}
@@ -20,7 +20,7 @@ export default function PlantList() {
             key={i}
             dispatch={dispatch}
           />
-        </>
+        </React.Fragment>
       ))}
       {items.length > 0 && (
         <p
