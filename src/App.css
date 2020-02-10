@@ -110,6 +110,16 @@ label {
   margin-bottom: 5px;
 }
 
+@media (min-width: 1250px) {
+  .intro {
+    width: 60vw;
+  }
+  .Item{
+    width: 26vw;
+    height: 10vw;
+  }
+}
+
 @media (max-width: 600px) {
   h2 {
     width: 85vw;
@@ -118,7 +128,10 @@ label {
     width: 80vw;
   }
   .Item {
-    max-width: 70vw;
+    width: 40vw;
+  }
+  .Timer{
+    font-size: calc(2px + 2vmin);
   }
   .placing {
     font-size: calc(6px + 2vmin);
