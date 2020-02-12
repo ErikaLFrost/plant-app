@@ -4,15 +4,11 @@ import Autocomplete from "./Autocomplete";
 
 export default function NewItem() {
   const [plantName, setplantName] = useState("");
-  const [wateringInterval, setWateringInterval] = useState(0);
-  const [plantInfo, setPlant] = useState("Select an Item");
-  const [plantPlacing, setPlantPlacing] = useState("");
+  const [plantInfo, setPlantInfo] = useState([]);
   const { dispatch } = usePlantContext();
 
   const onItemSelected = selectedItem => {
-    setWateringInterval(selectedItem.wateringInterval);
-    setPlantPlacing(selectedItem.placing)
-    setPlant(selectedItem.name);
+    setPlantInfo([selectedItem.name, selectedItem.wateringInterval, selectedItem.placing]);
   };
 
   return (
@@ -20,14 +16,16 @@ export default function NewItem() {
       className="ItemInput"
       onSubmit={e => {
         e.preventDefault();
-        dispatch(addPlant(plantName, plantInfo, wateringInterval, plantPlacing));
+        dispatch(addPlant(plantName, plantInfo));
+        setPlantInfo([]);
+        setplantName("");
       }}
     >
       <label style={{ marginTop: "1rem", display: "block" }}>
         Vad heter din växt?
       </label>{" "}
       <input
-        name="new-item"
+        name="newItem"
         type="text"
         placeholder="Växtnamn"
         value={plantName}

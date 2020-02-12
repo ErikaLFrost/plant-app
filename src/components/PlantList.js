@@ -5,7 +5,6 @@ import { usePlantContext, clearAll } from "../contexts/PlantContext";
 export default function PlantList() {
   const { state, dispatch } = usePlantContext();
   const items = state.items;
-  console.log(state);
 
   return (
     <>

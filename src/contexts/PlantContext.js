@@ -16,8 +16,6 @@ const getInitialState = () => {
   }
 };
 
-console.log(getInitialState());
-
 // Actions
 export const ADD_PLANT = "ADD_PLANT";
 export const REMOVE_PLANT = "REMOVE_PLANT";
@@ -26,8 +24,9 @@ export const UPDATE_TIMER = "UPDATE_TIMER";
 export const RESET_TIMER = "RESET_TIMER";
 
 // Action creators
-export function addPlant(plantName, plantType, wateringInterval, plantPlacing) {
-  console.log(plantType);
+export function addPlant(plantName, plantInfo) {
+  console.log(plantInfo);
+  const [plantType, wateringInterval, plantPlacing] = plantInfo;
   return {
     type: ADD_PLANT,
     item: {

@@ -11,7 +11,7 @@ export default function Timer({ index }) {
       dispatch(updateTimer(index));
     }, 2000);
     return () => clearInterval(interval);
-  });
+  }, [dispatch, index]);
 
   if (daysUntilWatering > 0) {
     return (
