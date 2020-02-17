@@ -52,7 +52,7 @@ export function updateTimer(index) {
 }
 
 export function resetTimer(index) {
-  return { type: RESET_TIMER, index }
+  return { type: RESET_TIMER, index };
 }
 
 // Reducer
@@ -78,16 +78,15 @@ export function plantReducer(state, action) {
             if (i === action.index) {
               return {
                 ...item,
-                daysUntilWatering: item.daysUntilWatering > 0 
-                ? item.daysUntilWatering - 1 
-                : 0
+                daysUntilWatering:
+                  item.daysUntilWatering > 0 ? item.daysUntilWatering - 1 : 0
               };
             }
             return item;
           })
         ]
       };
-      case RESET_TIMER:
+    case RESET_TIMER:
       return {
         ...state,
         items: [

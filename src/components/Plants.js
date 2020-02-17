@@ -5,7 +5,7 @@ import NewPlant from "./NewPlant";
 export default function Plants() {
   return (
     <header className="App-header">
-      <h2>Välkommen till Växt-hjälpen!</h2>
+      <h2>Välkommen till Växthjälpen!</h2>
       <div className="intro">
         <p style={{ marginBottom: "7px" }}>
           Visste du att växter boostar vår kreativitet, produktivitet,

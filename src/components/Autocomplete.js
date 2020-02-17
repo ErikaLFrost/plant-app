@@ -1,14 +1,13 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Downshift from "downshift";
 import plantInfo from "../plantInfo.json";
 
 const plants = plantInfo.plants.map(plants => plants);
 
-export default function Autocomplete({selectedItem, onItemSelected}) {
-
+export default function Autocomplete({ selectedItem, onItemSelected }) {
   const [items, setItems] = useState(plants);
 
-  const itemToString = plants => (plants ? plants.name : "")
+  const itemToString = plants => (plants ? plants.name : "");
 
   const onInputValueChanged = inputValue => {
     const items = plants.filter(p =>

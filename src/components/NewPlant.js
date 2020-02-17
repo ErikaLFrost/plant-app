@@ -8,7 +8,11 @@ export default function NewItem() {
   const { dispatch } = usePlantContext();
 
   const onItemSelected = selectedItem => {
-    setPlantInfo([selectedItem.name, selectedItem.wateringInterval, selectedItem.placing]);
+    setPlantInfo([
+      selectedItem.name,
+      selectedItem.wateringInterval,
+      selectedItem.placing
+    ]);
   };
 
   return (
